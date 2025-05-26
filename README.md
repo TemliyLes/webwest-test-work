@@ -37,3 +37,6 @@ npm run build
 ```sh
 npm run lint
 ```
+
+node -v
+v22.14.0

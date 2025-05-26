@@ -46,7 +46,7 @@ const realMax = computed(() => Math.ceil(props.max * props.size / COUNT_PER_PAGE
 const route = useRoute();
 const routeId = computed<number>(() => +route?.params?.page || 1);
 
-const from = computed<number>(() => COUNT_PER_PAGE * +route?.params?.page - COUNT_PER_PAGE);
+const from = computed<number>(() => COUNT_PER_PAGE * routeId.value - COUNT_PER_PAGE);
 const to = computed<number>(() => COUNT_PER_PAGE + from.value);
 
 const firstPart = ref<Tender[]>([])
